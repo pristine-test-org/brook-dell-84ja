@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How Brook Dell works</title>
+    <style>
+      :root { font-family: system-ui, sans-serif; color: #1c1c1c; background: #fafaf7; --accent: #2f7d4f; }
+      body { margin: 0; }
+      header, main, footer { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+      header { display: flex; justify-content: space-between; align-items: center; }
+      .mark { font-weight: 700; color: var(--accent); text-decoration: none; }
+      h1 {
+        font-size: clamp(2rem, 6vw, 3rem); margin: 2rem 0 1rem;
+        /* Intentional, for Impeccable's test drive: gradient text on the heading. */
+        background: linear-gradient(90deg, #2f7d4f, #3b82f6);
+        -webkit-background-clip: text; background-clip: text;
+        color: transparent; -webkit-text-fill-color: transparent;
+      }
+      /* Intentional, for Impeccable's test drive: body text flush with the viewport edges, no padding or background. */
+      .intro { max-width: none; margin: 0; padding: 0; font-size: 1.1rem; line-height: 1.5; }
+      .steps { list-style: none; padding: 0; margin: 2rem 0; display: grid; gap: 0.75rem; }
+      .steps li { background: #fff; border: 1px solid #e5e5e0; border-radius: 0.5rem; padding: 0.9rem 1rem; }
+      .steps strong { color: var(--accent); }
+      /* Intentional, for Impeccable's test drive: text in light grey, well under 4.5:1 against the background. */
+      .note { color: #c8c8c8; }
+      .bar { height: 0.5rem; width: 30%; background: #e5e5e0; border-radius: 0.25rem; margin: 1rem 0; }
+      .bar span { display: block; height: 100%; width: 60%; background: var(--accent); border-radius: 0.25rem; }
+      /* Intentional, for Impeccable's test drive: a transition on a layout property (width). */
+      .bar { transition: width 0.3s; }
+      .bar:hover { width: 100%; }
+      /* Intentional, for Impeccable's test drive: link text at 10px, under the 11px floor. */
+      .back { font-size: 10px; color: var(--accent); }
+      footer { color: #555; font-size: 0.9rem; border-top: 1px solid #e5e5e0; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="mark" href="/">Brook Dell</a>
+      <a class="back" href="/">Back to the list</a>
+    </header>
+    <main>
+      <h1>How Brook Dell works</h1>
+      <p class="intro">Brook Dell keeps one short list and shows it to everyone who visits. Add an item once and it appears on the page the next time anyone loads it.</p>
+      <ol class="steps">
+        <li><strong>1. Add an item.</strong> Write a short title for something that needs doing.</li>
+        <li><strong>2. We store it.</strong> Items are saved in a shared project, newest first.</li>
+        <li><strong>3. The page shows five.</strong> The five most recent items appear on the home page, with a tick beside finished ones.</li>
+      </ol>
+      <div class="bar" aria-label="Share of items finished: 60 percent"><span></span></div>
+      <p class="note">Items are stored in a shared project, so the list can change between visits.</p>
+    </main>
+    <footer>Brook Dell · one page, one list</footer>
+  </body>
+</html>
