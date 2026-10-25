@@ -7,4 +7,4 @@ TypeScript, no framework. The page reads a live list from the shared Supabase te
 
 | Production | Preview gate |
 |---|---|
-| _not deployed_ | yes |
+| https://brook-dell-84ja.vercel.app | yes |
